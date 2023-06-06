@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # 
-if dpkg-query -W libgl1 2>/dev/null | grep -q "libgl1"; then
-  echo -n ""
-else
-  echo "libgl1 is not installed. Installing..."
-  apt update
-  apt install -yq libgl1
-fi
+#if dpkg-query -W libgl1 2>/dev/null | grep -q "libgl1"; then
+#  echo -n ""
+#else
+#  echo "libgl1 is not installed. Installing..."
+#  apt update
+#  apt install -yq libgl1
+#fi
 
 # 
 #if dpkg-query -W ngrok 2>/dev/null | grep -q "ngrok"; then
@@ -46,7 +46,7 @@ function start_webui {
   local i=0
   while true
   do
-    echo -ne "\e[42;1;31mNgrok 터널이 열렸습니다: https://${message}/\e[0m"
+    echo -ne "\Ngrok: https://${message}/\e[0m"
     local count=0
     while [ $count -lt $spacing ]
     do
@@ -60,7 +60,7 @@ function start_webui {
       #echo -n ""
       (( j ++ ))
     done
-    echo -ne "\r" >&2 # 표준 에러 출력으로 변경
+    echo -ne "\r" >&2 #
     sleep 1
     (( i ++ ))
     if [ $i -eq $duration ]
@@ -72,11 +72,11 @@ function start_webui {
 
 #
 start_webui "${NGROK_PUBLIC_URL}" 1 &
-python /workspace/stable-diffusion-webui/launch.py --listen --xformers
+#python /workspace/stable-diffusion-webui/launch.py --listen --xformers --share
 
 # 
-kill $!
-kill -9 $(ps -ef | grep 'ngrok' | grep -v 'grep' | awk '{print $2}')
-deactivate
-echo "ngrok stopped"
-echo "."
+#kill $!
+#kill -9 $(ps -ef | grep 'ngrok' | grep -v 'grep' | awk '{print $2}')
+#deactivate
+#echo "ngrok stopped"
+#echo "."
