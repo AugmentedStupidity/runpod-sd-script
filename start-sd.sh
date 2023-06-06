@@ -74,6 +74,9 @@ function start_webui {
 start_webui "${NGROK_PUBLIC_URL}" 1 &
 #python /workspace/stable-diffusion-webui/launch.py --listen --xformers --share
 
+cd /workspace/stable-diffusion-webui/
+bash webui.sh --xformers --api --share
+
 # 
 #kill $!
 #kill -9 $(ps -ef | grep 'ngrok' | grep -v 'grep' | awk '{print $2}')
