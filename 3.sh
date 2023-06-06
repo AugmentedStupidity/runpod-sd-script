@@ -7,10 +7,8 @@ apt update && apt install -y nano ffmpeg neofetch glances htop wget git python3 
 #curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | tee /etc/apt/sources.list.d/ngrok.list && apt update && apt install ngrok
 #https://ngrok.com/download
 curl --header 'Host: bin.equinox.io' --user-agent 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:106.0) Gecko/20100101 Firefox/106.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' --header 'Accept-Language: en-US,en;q=0.5' --referer 'https://dashboard.ngrok.com/' --header 'Upgrade-Insecure-Requests: 1' --header 'Sec-Fetch-Dest: document' --header 'Sec-Fetch-Mode: navigate' --header 'Sec-Fetch-Site: cross-site' --header 'Sec-Fetch-User: ?1' 'https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz' --output 'ngrok-v3-stable-linux-amd64.tgz'
-
 tar -xvzf ngrok-v3-stable-linux-amd64.tgz
-
-sudo mv ./ngrok /usr/bin/ngrok
+mv ./ngrok /usr/bin/ngrok
 # Ngrok Token
 #ngrok config add-authtoken NGROK_TOKEN_HERE
 #echo "authtoken: NGROK_TOKEN_HERE" > /workspace/ngrok.yml
