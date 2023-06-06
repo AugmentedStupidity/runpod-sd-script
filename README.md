@@ -6,7 +6,8 @@
 
 * Download the startscript file
 
-```sh -c "$(curl -fsSL https://raw.githubusercontent.com/AugmentedStupidity/runpod-sd-script/main/runpod_sd_webui_startscript.sh)"
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/AugmentedStupidity/runpod-sd-script/main/runpod_sd_webui_startscript.sh)"
 ```
 
 ```bash
