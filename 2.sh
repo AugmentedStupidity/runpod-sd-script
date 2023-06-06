@@ -32,10 +32,10 @@ git clone https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git /workspa
 #python -m pip install -r /workspace/stable-diffusion-webui/requirements_versions.txt
 pip install -r /workspace/stable-diffusion-webui/requirements.txt
 # start.sh 
-#wget https://gist.github.com/panta5/b0cbddee37d6839561ad1b6a2d353a5b/raw/start.sh -O /workspace/stable-diffusion-webui/start-sd.sh
-#wget https://gist.githubusercontent.com/panta5/6239382f45a773d75a9788efd1c940a9/raw/continue.sh -O /workspace/stable-diffusion-webui/continue.sh
-#chmod +x /workspace/stable-diffusion-webui/start.sh
-#chmod +x /workspace/stable-diffusion-webui/continue.sh
+wget https://raw.githubusercontent.com/AugmentedStupidity/runpod-sd-script/main/start-sd.sh -O /workspace/stable-diffusion-webui/start-sd.sh
+wget https://raw.githubusercontent.com/AugmentedStupidity/runpod-sd-script/main/continue.sh -O /workspace/stable-diffusion-webui/continue.sh
+chmod +x /workspace/stable-diffusion-webui/start-sd.sh
+chmod +x /workspace/stable-diffusion-webui/continue.sh
 # 
 ###############################################################################################
 
@@ -46,20 +46,20 @@ cd /workspace/stable-diffusion-webui/models/Stable-diffusion
 wget https://huggingface.co/prompthero/openjourney-v4/resolve/main/openjourney-v4.ckpt
 
 # https://huggingface.co/SG161222/Realistic_Vision_V1.4
-git lfs install
-git clone https://huggingface.co/SG161222/Realistic_Vision_V1.4
-git pull https://huggingface.co/SG161222/Realistic_Vision_V1.4
-cd /workspace/stable-diffusion-webui/models/Stable-diffusion/Realistic_Vision_V1.4
-rm Realistic_Vision_V1.4-*
+#git lfs install
+#git clone https://huggingface.co/SG161222/Realistic_Vision_V1.4
+#git pull https://huggingface.co/SG161222/Realistic_Vision_V1.4
+#cd /workspace/stable-diffusion-webui/models/Stable-diffusion/Realistic_Vision_V1.4
+#rm Realistic_Vision_V1.4-*
 #rm Realistic_Vision_V1.4.safetensors
 
 #cd /workspace/stable-diffusion-webui/
 #bash webui.sh --xformers --api --share
 
-cd /workspace/models/
-git lfs install
-git clone https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
-git pull https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
+#cd /workspace/models/
+#git lfs install
+#git clone https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
+#git pull https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
 
 cd /root/text-generation-webui/
 cd extensions/
@@ -115,11 +115,11 @@ source ~/.bashrc
 ###############################################################################################
 apt-get clean
 sed -i 's/can_run_as_root=0/can_run_as_root=1/g' /workspace/stable-diffusion-webui/webui.sh
-echo "bash -c /workspace/stable-diffusion-webui/start.sh"
+echo "bash -c /workspace/stable-diffusion-webui/start-sd.sh"
 echo "bash -c /workspace/stable-diffusion-webui/continue.sh   \"\e[0m "
 
-cd /workspace/stable-diffusion-webui/
-bash webui.sh --xformers --api --share
+#cd /workspace/stable-diffusion-webui/
+#bash webui.sh --xformers --api --share
 
 echo YAY!!!!!!!!!!!
 sleep 5
