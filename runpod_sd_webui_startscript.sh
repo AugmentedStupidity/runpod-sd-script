@@ -34,9 +34,9 @@ chmod +x /workspace/stable-diffusion-webui/continue.sh
 ###############################################################################################
 
 cd /workspace/stable-diffusion-webui/models/Stable-diffusion
-#git lfs install
-#git clone https://huggingface.co/prompthero/openjourney-v4
-#git pull https://huggingface.co/prompthero/openjourney-v4
+git lfs install
+git clone https://huggingface.co/prompthero/openjourney-v4
+git pull https://huggingface.co/prompthero/openjourney-v4
 
 # https://huggingface.co/SG161222/Realistic_Vision_V1.4
 git lfs install
@@ -49,9 +49,12 @@ rm Realistic_Vision_V1.4-*
 #cd /workspace/stable-diffusion-webui/
 #bash webui.sh --xformers --api --share
 
+cd /workspace/models/
+git lfs install
+git clone https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
+git pull https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
 
-
-cd ~/text-generation-webui/
+cd /root/text-generation-webui/
 cd extensions/
 cd api/
 pip install -r requirements.txt
