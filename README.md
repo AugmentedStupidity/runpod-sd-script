@@ -6,6 +6,12 @@
 
 * Download the startscript file
 
+```sh -c "$(curl -fsSL https://raw.githubusercontent.com/AugmentedStupidity/runpod-sd-script/main/runpod_sd_webui_startscript.sh)"```
+
+```bash
+wget [https://gist.github.com/panta5/8706ce687576c4a80192fa3c05cffafc/raw/runpod_sd_webui_startscript.sh](https://raw.githubusercontent.com/AugmentedStupidity/runpod-sd-script/main/runpod_sd_webui_startscript.sh) -O /root/runpod.sh && chmod +x /root/runpod.sh && sed -i 's/NGROK_TOKEN_HERE/blablabla/g' /root/runpod.sh && bash /root/runpod.sh
+```
+
 ```bash
 wget https://gist.github.com/panta5/8706ce687576c4a80192fa3c05cffafc/raw/runpod_sd_webui_startscript.sh -O /root/runpod_startscript.sh
 ```
@@ -34,10 +40,7 @@ bash /root/runpod_startscript.sh
 
 * Wait until it says it's done, as shown below.
 
-```
-환경 구성이 완료됐습니다.
-이후부터는 시작할 때 /workspace/stable-diffusion-webui/start.sh 파일을 실행해주세요
-```
+
 
 * Run the WebUI
 
@@ -56,7 +59,7 @@ Now enjoy it.
 * *토큰여기다넣어* 부분만 본인 토큰으로 교체후 터미널에 복붙 ㄱㄱ
 
 ```bash
-wget https://gist.github.com/panta5/8706ce687576c4a80192fa3c05cffafc/raw/runpod_sd_webui_startscript.sh -O /root/runpod.sh && chmod +x /root/runpod.sh && sed -i 's/NGROK_TOKEN_HERE/토큰여기다넣어/g' /root/runpod.sh && bash /root/runpod.sh
+wget https://gist.github.com/panta5/8706ce687576c4a80192fa3c05cffafc/raw/runpod_sd_webui_startscript.sh -O /root/runpod.sh && chmod +x /root/runpod.sh && sed -i 's/NGROK_TOKEN_HERE/blablabla/g' /root/runpod.sh && bash /root/runpod.sh
 ```
 
 ## 유의사항
