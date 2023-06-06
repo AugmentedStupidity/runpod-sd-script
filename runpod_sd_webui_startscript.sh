@@ -96,7 +96,7 @@ alias aliasedit='nano ~/.bashrc' \n
 alias aliasreload='source ~/.bashrc' \n
 alias pkill='kill -9' \n
 alias netdatainstall='wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh --nightly-channel --claim-token KvsmT6WV9cuYelOVZ-CEJtIkoUkleSlI2qtSzwBOB0f7InqJFOv_ZSholDuzxk-3dtoeOsJM8Ky3RJ9j7ubgKgK1MrwbNkmEDNaTPEsUKcoA1XuMTBgafROPKf5lS-KubYeLDp8 --claim-rooms 08add65d-2e24-4137-b1cc-ad05f57e9dcd --claim-url https://app.netdata.cloud' \n
-alias netdatarestart='service netdata restart'/g" ~/.bashrc
+alias netdatarestart='service netdata restart'/g" /root/.bashrc
 
 source ~/.bashrc
 
