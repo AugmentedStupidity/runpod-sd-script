@@ -24,14 +24,14 @@ wget https://huggingface.co/datasets/gsdf/EasyNegative/resolve/main/EasyNegative
 git clone https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git /workspace/stable-diffusion-webui/extensions/a1111-sd-webui-tagcomplete/
 # venv
 #python -m venv /workspace/stable-diffusion-webui/venv --without-pip
-python -m venv /workspace/stable-diffusion-webui/venv
+#python -m venv /workspace/stable-diffusion-webui/venv
 # venv activate
 #source /workspace/stable-diffusion-webui/venv/bin/activate
-source /workspace/stable-diffusion-webui/venv/bin/activate
+#source /workspace/stable-diffusion-webui/venv/bin/activate
 #curl https://bootstrap.pypa.io/get-pip.py | python
 # 
 #python -m pip install -r /workspace/stable-diffusion-webui/requirements_versions.txt
-python -m pip install -r /workspace/stable-diffusion-webui/requirements.txt
+#python -m pip install -r /workspace/stable-diffusion-webui/requirements.txt
 
 # start.sh 
 wget https://raw.githubusercontent.com/AugmentedStupidity/runpod-sd-script/main/start-sd.sh -O /workspace/stable-diffusion-webui/start-sd.sh
@@ -121,8 +121,8 @@ sed -i 's/can_run_as_root=0/can_run_as_root=1/g' /workspace/stable-diffusion-web
 echo "bash -c /workspace/stable-diffusion-webui/start-sd.sh"
 echo "bash -c /workspace/stable-diffusion-webui/continue.sh"
 
-#cd /workspace/stable-diffusion-webui/
-#bash webui.sh --xformers --api --share
+cd /workspace/stable-diffusion-webui/
+bash webui.sh --xformers --api --share
 
 echo YAY!!!!!!!!!!!
 sleep 5
