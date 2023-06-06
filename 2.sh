@@ -25,8 +25,10 @@ wget https://huggingface.co/datasets/gsdf/EasyNegative/resolve/main/EasyNegative
 git clone https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git /workspace/stable-diffusion-webui/extensions/a1111-sd-webui-tagcomplete/
 # venv
 #python -m venv /workspace/stable-diffusion-webui/venv --without-pip
+python -m venv /workspace/stable-diffusion-webui/venv
 # venv activate
 #source /workspace/stable-diffusion-webui/venv/bin/activate
+source /workspace/stable-diffusion-webui/venv/bin/activate
 #curl https://bootstrap.pypa.io/get-pip.py | python
 # 
 #python -m pip install -r /workspace/stable-diffusion-webui/requirements_versions.txt
