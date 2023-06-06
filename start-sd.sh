@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ngrok config add-authtoken NGROK_TOKEN_HERE
+echo "authtoken: NGROK_TOKEN_HERE" > /workspace/ngrok.yml
 # 
 #if dpkg-query -W libgl1 2>/dev/null | grep -q "libgl1"; then
 #  echo -n ""
