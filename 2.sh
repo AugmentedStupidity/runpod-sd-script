@@ -90,17 +90,17 @@ ls -la
 
 
 #=================================
-sed -i "/#fi/i \n
-alias restartob='bash /restart-text-generation-webui.sh' \n
-alias editmodel='nano /workspace/run-text-generation-webui.sh' \n
-alias restartsd='bash /workspace/stable-diffusion-webui/webui.sh --xformers --api --share' \n
-alias aliasedit='nano ~/.bashrc' \n
-alias aliasreload='source ~/.bashrc' \n
-alias pkill='kill -9' \n
-alias netdatainstall='wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh --nightly-channel --claim-token KvsmT6WV9cuYelOVZ-CEJtIkoUkleSlI2qtSzwBOB0f7InqJFOv_ZSholDuzxk-3dtoeOsJM8Ky3RJ9j7ubgKgK1MrwbNkmEDNaTPEsUKcoA1XuMTBgafROPKf5lS-KubYeLDp8 --claim-rooms 08add65d-2e24-4137-b1cc-ad05f57e9dcd --claim-url https://app.netdata.cloud' \n
+sed -i "/#fi/i \
+alias restartob='bash /restart-text-generation-webui.sh' \
+alias editmodel='nano /workspace/run-text-generation-webui.sh' \
+alias restartsd='bash /workspace/stable-diffusion-webui/webui.sh --xformers --api --share' \
+alias aliasedit='nano ~/.bashrc' \
+alias aliasreload='source ~/.bashrc' \
+alias pkill='kill -9' \
+alias netdatainstall='wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh --nightly-channel --claim-token KvsmT6WV9cuYelOVZ-CEJtIkoUkleSlI2qtSzwBOB0f7InqJFOv_ZSholDuzxk-3dtoeOsJM8Ky3RJ9j7ubgKgK1MrwbNkmEDNaTPEsUKcoA1XuMTBgafROPKf5lS-KubYeLDp8 --claim-rooms 08add65d-2e24-4137-b1cc-ad05f57e9dcd --claim-url https://app.netdata.cloud' \
 alias netdatarestart='service netdata restart'/g" /root/.bashrc
 
-source ~/.bashrc
+source /root/.bashrc
 
 #alias restart='bash /restart-text-generation-webui.sh'
 #alias editmodel='nano /workspace/run-text-generation-webui.sh'
@@ -118,7 +118,7 @@ source ~/.bashrc
 apt-get clean
 sed -i 's/can_run_as_root=0/can_run_as_root=1/g' /workspace/stable-diffusion-webui/webui.sh
 echo "bash -c /workspace/stable-diffusion-webui/start-sd.sh"
-echo "bash -c /workspace/stable-diffusion-webui/continue.sh   \"\e[0m "
+echo "bash -c /workspace/stable-diffusion-webui/continue.sh   \e/ "
 
 #cd /workspace/stable-diffusion-webui/
 #bash webui.sh --xformers --api --share
