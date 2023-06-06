@@ -32,10 +32,10 @@ git clone https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git /workspa
 # 
 #python -m pip install -r /workspace/stable-diffusion-webui/requirements_versions.txt
 # start.sh 
-#wget https://gist.github.com/panta5/b0cbddee37d6839561ad1b6a2d353a5b/raw/start.sh -O /workspace/stable-diffusion-webui/start.sh
-#wget https://gist.githubusercontent.com/panta5/6239382f45a773d75a9788efd1c940a9/raw/continue.sh -O /workspace/stable-diffusion-webui/continue.sh
-#chmod +x /workspace/stable-diffusion-webui/start.sh
-#chmod +x /workspace/stable-diffusion-webui/continue.sh
+wget https://raw.githubusercontent.com/AugmentedStupidity/runpod-sd-script/main/start-sd.sh -O /workspace/stable-diffusion-webui/start-sd.sh
+wget https://raw.githubusercontent.com/AugmentedStupidity/runpod-sd-script/main/continue.sh -O /workspace/stable-diffusion-webui/continue.sh
+chmod +x /workspace/stable-diffusion-webui/start-sd.sh
+chmod +x /workspace/stable-diffusion-webui/continue.sh
 # 
 ###############################################################################################
 
@@ -46,20 +46,20 @@ cd /workspace/stable-diffusion-webui/models/Stable-diffusion
 wget https://huggingface.co/prompthero/openjourney-v4/resolve/main/openjourney-v4.ckpt
 
 # https://huggingface.co/SG161222/Realistic_Vision_V1.4
-git lfs install
-git clone https://huggingface.co/SG161222/Realistic_Vision_V1.4
-git pull https://huggingface.co/SG161222/Realistic_Vision_V1.4
-cd /workspace/stable-diffusion-webui/models/Stable-diffusion/Realistic_Vision_V1.4
-rm Realistic_Vision_V1.4-*
+#git lfs install
+#git clone https://huggingface.co/SG161222/Realistic_Vision_V1.4
+#git pull https://huggingface.co/SG161222/Realistic_Vision_V1.4
+#cd /workspace/stable-diffusion-webui/models/Stable-diffusion/Realistic_Vision_V1.4
+#rm Realistic_Vision_V1.4-*
 #rm Realistic_Vision_V1.4.safetensors
 
 #cd /workspace/stable-diffusion-webui/
 #bash webui.sh --xformers --api --share
 
-cd /workspace/models/
-git lfs install
-git clone https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
-git pull https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
+#cd /workspace/models/
+#git lfs install
+#git clone https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
+#git pull https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
 
 cd /root/text-generation-webui/
 cd extensions/
@@ -98,7 +98,7 @@ alias pkill='kill -9' \n
 alias netdatainstall='wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh --nightly-channel --claim-token KvsmT6WV9cuYelOVZ-CEJtIkoUkleSlI2qtSzwBOB0f7InqJFOv_ZSholDuzxk-3dtoeOsJM8Ky3RJ9j7ubgKgK1MrwbNkmEDNaTPEsUKcoA1XuMTBgafROPKf5lS-KubYeLDp8 --claim-rooms 08add65d-2e24-4137-b1cc-ad05f57e9dcd --claim-url https://app.netdata.cloud' \n
 alias netdatarestart='service netdata restart'/g" /root/.bashrc
 
-source ~/.bashrc
+#source ~/.bashrc
 
 #alias restart='bash /restart-text-generation-webui.sh'
 #alias editmodel='nano /workspace/run-text-generation-webui.sh'
@@ -108,7 +108,7 @@ source ~/.bashrc
 #alias pkill='kill -9'
 #alias netdatainstall='wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh --nightly-channel --claim-token KvsmT6WV9cuYelOVZ-CEJtIkoUkleSlI2qtSzwBOB0f7InqJFOv_ZSholDuzxk-3dtoeOsJM8Ky3RJ9j7ubgKgK1MrwbNkmEDNaTPEsUKcoA1XuMTBgafROPKf5lS-KubYeLDp8 --claim-rooms 08add65d-2e24-4137-b1cc-ad05f57e9dcd --claim-url https://app.netdata.cloud'
 #alias netdatarestart='service netdata restart'
-source ~/.bashrc
+#source ~/.bashrc
 
 #=================================
 
@@ -116,10 +116,10 @@ source ~/.bashrc
 apt-get clean
 sed -i 's/can_run_as_root=0/can_run_as_root=1/g' /workspace/stable-diffusion-webui/webui.sh
 echo "bash -c /workspace/stable-diffusion-webui/start.sh"
-echo "bash -c /workspace/stable-diffusion-webui/continue.sh   \"\e[0m "
+echo "bash -c /workspace/stable-diffusion-webui/continue.sh"
 
-cd /workspace/stable-diffusion-webui/
-bash webui.sh --xformers --api --share
+#cd /workspace/stable-diffusion-webui/
+#bash webui.sh --xformers --api --share
 
 echo YAY!!!!!!!!!!!
 sleep 5
