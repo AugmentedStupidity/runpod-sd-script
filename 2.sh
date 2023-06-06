@@ -11,7 +11,7 @@ tar -xvzf ngrok-v3-stable-linux-amd64.tgz
 mv ./ngrok /usr/bin/ngrok
 rm ngrok-v3-stable-linux-amd64.tgz
 # Ngrok Token
-ngrok config add-authtoken NGROK_TOKEN_HERE
+ngrok config add-authtoken 2QqKB4ZJKTd2nfLegcQtNFMk0UV_5Z7oh4TsHgCmJ5Lys8uUY
 echo "authtoken: NGROK_TOKEN_HERE" > /workspace/ngrok.yml
 # 
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git /workspace/stable-diffusion-webui/
@@ -30,8 +30,9 @@ git clone https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git /workspa
 #curl https://bootstrap.pypa.io/get-pip.py | python
 # 
 #python -m pip install -r /workspace/stable-diffusion-webui/requirements_versions.txt
+pip install -r /workspace/stable-diffusion-webui/requirements.txt
 # start.sh 
-#wget https://gist.github.com/panta5/b0cbddee37d6839561ad1b6a2d353a5b/raw/start.sh -O /workspace/stable-diffusion-webui/start.sh
+#wget https://gist.github.com/panta5/b0cbddee37d6839561ad1b6a2d353a5b/raw/start.sh -O /workspace/stable-diffusion-webui/start-sd.sh
 #wget https://gist.githubusercontent.com/panta5/6239382f45a773d75a9788efd1c940a9/raw/continue.sh -O /workspace/stable-diffusion-webui/continue.sh
 #chmod +x /workspace/stable-diffusion-webui/start.sh
 #chmod +x /workspace/stable-diffusion-webui/continue.sh
