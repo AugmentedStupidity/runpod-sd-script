@@ -11,8 +11,7 @@ tar -xvzf ngrok-v3-stable-linux-amd64.tgz
 mv ./ngrok /usr/bin/ngrok
 rm ngrok-v3-stable-linux-amd64.tgz
 # Ngrok Token
-ngrok config add-authtoken 2QqKB4ZJKTd2nfLegcQtNFMk0UV_5Z7oh4TsHgCmJ5Lys8uUY
-echo "authtoken: NGROK_TOKEN_HERE" > /workspace/ngrok.yml
+
 # 
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git /workspace/stable-diffusion-webui/
 # 
