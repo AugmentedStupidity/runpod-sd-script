@@ -122,7 +122,7 @@ echo "bash -c /workspace/stable-diffusion-webui/start-sd.sh"
 echo "bash -c /workspace/stable-diffusion-webui/continue.sh"
 
 cd /workspace/stable-diffusion-webui/
-bash webui.sh --xformers --api --share
+bash webui-setup.sh --xformers --api --share
 
 echo YAY!!!!!!!!!!!
 sleep 5
