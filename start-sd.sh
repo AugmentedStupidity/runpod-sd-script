@@ -12,20 +12,20 @@ echo "authtoken: NGROK_TOKEN_HERE" > /workspace/ngrok.yml
 #fi
 
 # 
-if dpkg-query -W ngrok 2>/dev/null | grep -q "ngrok"; then
-  echo -n ""
-else
+#if dpkg-query -W ngrok 2>/dev/null | grep -q "ngrok"; then
+#  echo -n ""
+#else
 #  echo "ngrok is not installed. Installing..."
 #  curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | tee /etc/apt/sources.list.d/ngrok.list && apt update && apt install ngrok
 cp /workspace/ngrok.yml /root/.config/ngrok/ngrok.yml
 #fi
 
-if [[ -z "${VIRTUAL_ENV}" ]]; then
-  echo "python venv."
-  source /workspace/stable-diffusion-webui/venv/bin/activate
-else
-  echo "venv . ."
-fi
+#if [[ -z "${VIRTUAL_ENV}" ]]; then
+#  echo "python venv."
+#  source /workspace/stable-diffusion-webui/venv/bin/activate
+#else
+#  echo "venv . ."
+#fi
 
 nohup ngrok http 7861 --log=stdout &> /dev/null &
 
