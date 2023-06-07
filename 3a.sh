@@ -27,7 +27,7 @@ git clone https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git /workspa
 python -m venv /workspace/stable-diffusion-webui/venv --without-pip
 # venv activate
 source /workspace/stable-diffusion-webui/venv/bin/activate
-curl https://bootstrap.pypa.io/get-pip.py | python
+#curl https://bootstrap.pypa.io/get-pip.py | python
 # 
 python -m pip install -r /workspace/stable-diffusion-webui/requirements_versions.txt
 # start.sh 
