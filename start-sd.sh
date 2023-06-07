@@ -76,7 +76,7 @@ function start_webui {
 start_webui "${NGROK_PUBLIC_URL}" 1 &
 #python /workspace/stable-diffusion-webui/launch.py --listen --xformers --share
 
-bash /workspace/stable-diffusion-webui/webui.sh --xformers --api --share
+#bash /workspace/stable-diffusion-webui/webui.sh --xformers --api --share
 
 # 
 #kill $!
