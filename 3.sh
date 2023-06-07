@@ -121,7 +121,8 @@ sed -i 's/can_run_as_root=0/can_run_as_root=1/g' /workspace/stable-diffusion-web
 echo "bash -c /workspace/stable-diffusion-webui/start-sd.sh"
 echo "bash -c /workspace/stable-diffusion-webui/continue.sh"
 
-cd /workspace/stable-diffusion-webui/
+#cd /workspace/stable-diffusion-webui/
+cd /root/stable-diffusion-webui/
 bash webui-setup.sh --xformers --api --share
 
 echo YAY!!!!!!!!!!!
