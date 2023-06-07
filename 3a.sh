@@ -43,24 +43,21 @@ cd /workspace/stable-diffusion-webui/models/Stable-diffusion
 #git clone https://huggingface.co/prompthero/openjourney-v4
 
 # https://huggingface.co/SG161222/Realistic_Vision_V1.4
-git lfs install
-git clone https://huggingface.co/SG161222/Realistic_Vision_V1.4
+#git lfs install
+#git clone https://huggingface.co/SG161222/Realistic_Vision_V1.4
 
-cd /workspace/stable-diffusion-webui/models/Stable-diffusion/Realistic_Vision_V1.4
-rm Realistic_Vision_V1.4-*
+#cd /workspace/stable-diffusion-webui/models/Stable-diffusion/Realistic_Vision_V1.4
+#rm Realistic_Vision_V1.4-*
 #rm Realistic_Vision_V1.4.safetensors
 
 #cd /workspace/stable-diffusion-webui/
 #bash webui.sh --xformers --api --share
 
-wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh --nightly-channel --claim-token KvsmT6WV9cuYelOVZ-CEJtIkoUkleSlI2qtSzwBOB0f7InqJFOv_ZSholDuzxk-3dtoeOsJM8Ky3RJ9j7ubgKgK1MrwbNkmEDNaTPEsUKcoA1XuMTBgafROPKf5lS-KubYeLDp8 --claim-rooms 08add65d-2e24-4137-b1cc-ad05f57e9dcd --claim-url https://app.netdata.cloud
+#wget -O /tmp/netdata-kickstart.sh https://my-netdata.io/kickstart.sh && sh /tmp/netdata-kickstart.sh --nightly-channel --claim-token KvsmT6WV9cuYelOVZ-CEJtIkoUkleSlI2qtSzwBOB0f7InqJFOv_ZSholDuzxk-3dtoeOsJM8Ky3RJ9j7ubgKgK1MrwbNkmEDNaTPEsUKcoA1XuMTBgafROPKf5lS-KubYeLDp8 --claim-rooms 08add65d-2e24-4137-b1cc-ad05f57e9dcd --claim-url https://app.netdata.cloud
+#service netdata restart
+#cd ~/text-generation-webui/
 
-service netdata restart
-
-cd ~/text-generation-webui/
-&&
 cd extensions/
-&&
 cd api/
 pip install -r requirements.txt
 cd ..
@@ -100,8 +97,8 @@ source ~/.bashrc
 ###############################################################################################
 apt-get clean
 sed -i 's/can_run_as_root=0/can_run_as_root=1/g' /workspace/stable-diffusion-webui/webui.sh
-echo -e "/workspace/stable-diffusion-webui/start.sh"
-echo -e "\n\e[42;1;31mbash -c \"cd /workspace/stable-diffusion-webui \&\& ./continue.sh\"\e[0m "
+echo  "bash -c /workspace/stable-diffusion-webui/start.sh"
+echo  "bash -c /workspace/stable-diffusion-webui/continue.sh"
 
 cd /workspace/stable-diffusion-webui/
 #bash webui.sh --xformers --api --share
