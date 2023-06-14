@@ -9,6 +9,10 @@
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/AugmentedStupidity/runpod-sd-script/main/runpod_sd_webui_startscript.sh)"
 ```
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/AugmentedStupidity/runpod-sd-script/main/text-setup.sh)"
+```
+
 
 ```bash
 wget [https://gist.github.com/panta5/8706ce687576c4a80192fa3c05cffafc/raw/runpod_sd_webui_startscript.sh](https://raw.githubusercontent.com/AugmentedStupidity/runpod-sd-script/main/runpod_sd_webui_startscript.sh) -O /root/runpod.sh && chmod +x /root/runpod.sh && sed -i 's/NGROK_TOKEN_HERE/blablabla/g' /root/runpod.sh && bash /root/runpod.sh
@@ -56,21 +60,6 @@ Now enjoy it.
 > Once it's installed, we'll only run it with the */workspace/stable-diffusion-webui/start.sh* file from now on.
 
 
-## ㄹㅇ 한방설치 가이드
-
-* *토큰여기다넣어* 부분만 본인 토큰으로 교체후 터미널에 복붙 ㄱㄱ
-
-```bash
-wget https://gist.github.com/panta5/8706ce687576c4a80192fa3c05cffafc/raw/runpod_sd_webui_startscript.sh -O /root/runpod.sh && chmod +x /root/runpod.sh && sed -i 's/NGROK_TOKEN_HERE/blablabla/g' /root/runpod.sh && bash /root/runpod.sh
-```
-
-## 유의사항
-
-* 유지보수는 내가 필요하면 할 예정임
-* 한번만 설치해두면 다음부터는 */workspace/stable-diffusion-webui/start.sh* 만 켜면 자동으로 켜짐
-* 스팟 인스턴스 호환용으로 만들긴 했는데 스팟에서 제대로 작동안될수도 있음
-* PyTorch 템플릿 써야 제대로 작동될거임
-* 구름도 될거같긴한데 파이썬 3.10 이랑 pip는 사전설치 해야된다는거!!
 
 
 ## Credit
