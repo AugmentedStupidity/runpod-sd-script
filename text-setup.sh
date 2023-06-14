@@ -63,6 +63,10 @@ sed -i 's/--api/--api --model TheBloke_Wizard-Vicuna-30B-Uncensored-GPTQ --model
 #cd /workspace/stable-diffusion-webui/
 #bash webui.sh --xformers --api --share
 
+cd root/text-generation-webui/
+wget https://github.com/AugmentedStupidity/runpod-sd-script/raw/main/characters/characters.zip
+unzip characters.zip
+
 echo bash /restart-text-generation-webui.sh
 sleep 10
 source /restart-text-generation-webui.sh
