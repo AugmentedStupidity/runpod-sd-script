@@ -53,7 +53,7 @@ ls -la
 apt-get clean
 
 cd /root/text-generation-webui
-sed -i 's/--api/--api --model TheBloke_Wizard-Vicuna-30B-Uncensored-GPTQ --model_type LLaMA --chat --wbits 4 --auto-devices --extensions long_term_memory whisper_stt silero_tts elevenlabs_tts llama_prompts sd_api_pictures/g' ./server.py
+sed -i 's/--api/--api --model TheBloke_Wizard-Vicuna-30B-Uncensored-GPTQ --model_type LLaMA --chat --wbits 4 --auto-devices --extensions long_term_memory whisper_stt silero_tts elevenlabs_tts llama_prompts sd_api_pictures/g' /workspace/run-text-generation-webui.sh
 #python server.py --listen --api --model TheBloke_Wizard-Vicuna-30B-Uncensored-GPTQ --model_type LLaMA --chat --wbits 4 --auto-devices --extensions long_term_memory whisper_stt silero_tts elevenlabs_tts llama_prompts sd_api_pictures
 
 
@@ -64,7 +64,8 @@ sed -i 's/--api/--api --model TheBloke_Wizard-Vicuna-30B-Uncensored-GPTQ --model
 #bash webui.sh --xformers --api --share
 
 echo bash /restart-text-generation-webui.sh
-bash /restart-text-generation-webui.sh
+sleep 10
+source /restart-text-generation-webui.sh
 
 echo YAY!!!!!!!!!!!
 sleep 5
