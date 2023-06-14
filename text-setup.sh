@@ -63,6 +63,9 @@ sed -i 's/--api/--api --model TheBloke_Wizard-Vicuna-30B-Uncensored-GPTQ --model
 #cd /workspace/stable-diffusion-webui/
 #bash webui.sh --xformers --api --share
 
+echo bash /restart-text-generation-webui.sh
+bash /restart-text-generation-webui.sh
+
 echo YAY!!!!!!!!!!!
 sleep 5
 echo Dustin Did it!!!
