@@ -64,8 +64,13 @@ sed -i 's/--api/--api --model TheBloke_Wizard-Vicuna-30B-Uncensored-GPTQ --model
 #bash webui.sh --xformers --api --share
 
 cd /root/text-generation-webui/characters/
-wget https://github.com/AugmentedStupidity/runpod-sd-script/raw/main/characters/characters.zip
-unzip characters.zip
+#wget https://github.com/AugmentedStupidity/runpod-sd-script/raw/main/characters/characters.zip
+#unzip characters.zip
+
+wget https://github.com/AugmentedStupidity/runpod-sd-script/raw/main/characters/EVAI.zip
+unzip EVAI.zip
+wget https://github.com/AugmentedStupidity/runpod-sd-script/raw/main/characters/Mia.zip
+unzip Mia.zip
 
 echo bash /restart-text-generation-webui.sh
 sleep 10
