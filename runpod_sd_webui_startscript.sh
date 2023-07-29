@@ -133,4 +133,7 @@ sleep 6
 echo Boop Boop
 sleep 3
 echo Press any key to Fuck Off!
+
+bash ~/scripts/restart-text-generation-webui.sh
+echo "bash ~/scripts/restart-text-generation-webui.sh"
 exit 0
