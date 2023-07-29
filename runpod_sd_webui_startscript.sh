@@ -57,7 +57,8 @@ rm Realistic_Vision_V1.4-*
 #cd /workspace/stable-diffusion-webui/
 #bash webui.sh --xformers --api --share
 
-cd /workspace/models/
+#cd /workspace/models/
+cd text-generation-webui/models/
 git lfs install
 git clone https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
 git pull https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
