@@ -22,6 +22,8 @@ git lfs install
 git clone https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
 git pull https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
 
+python3 -m pip install --upgrade pip
+
 cd /root/text-generation-webui/
 pip install -r requirements.txt
 cd extensions/
