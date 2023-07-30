@@ -62,9 +62,15 @@ cd text-generation-webui/models/
 git lfs install
 git clone https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
 git pull https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
+git clone https://huggingface.co/TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ
+git pull https://huggingface.co/TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ
+git clone https://huggingface.co/TheBloke/Wizard-Vicuna-7B-Uncensored-GPTQ
+git pull https://huggingface.co/TheBloke/Wizard-Vicuna-7B-Uncensored-GPTQ
 git lfs install
 git clone https://huggingface.co/TheBloke/llama-2-70b-Guanaco-QLoRA-GPTQ
 git pull https://huggingface.co/TheBloke/llama-2-70b-Guanaco-QLoRA-GPTQ
+git clone https://huggingface.co/georgesung/llama2_7b_chat_uncensored
+git pull https://huggingface.co/georgesung/llama2_7b_chat_uncensored
 
 python3 -m pip install --upgrade pip
 
