@@ -62,6 +62,9 @@ cd text-generation-webui/models/
 git lfs install
 git clone https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
 git pull https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
+git lfs install
+git clone https://huggingface.co/TheBloke/llama-2-70b-Guanaco-QLoRA-GPTQ
+git pull https://huggingface.co/TheBloke/llama-2-70b-Guanaco-QLoRA-GPTQ
 
 python3 -m pip install --upgrade pip
 
