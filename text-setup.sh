@@ -21,14 +21,14 @@ mv ./ngrok /usr/bin/ngrok
 
 #cd /workspace/models/
 cd text-generation-webui/models/
-git lfs install
-git clone https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
-git pull https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
-git clone https://huggingface.co/TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ
-git pull https://huggingface.co/TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ
-git clone https://huggingface.co/TheBloke/Wizard-Vicuna-7B-Uncensored-GPTQ
-git pull https://huggingface.co/TheBloke/Wizard-Vicuna-7B-Uncensored-GPTQ
-git lfs install
+#git lfs install
+#git clone https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
+#git pull https://huggingface.co/TheBloke/Wizard-Vicuna-30B-Uncensored-GPTQ
+#git clone https://huggingface.co/TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ
+#git pull https://huggingface.co/TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ
+#git clone https://huggingface.co/TheBloke/Wizard-Vicuna-7B-Uncensored-GPTQ
+#git pull https://huggingface.co/TheBloke/Wizard-Vicuna-7B-Uncensored-GPTQ
+#git lfs install
 git clone https://huggingface.co/TheBloke/llama-2-70b-Guanaco-QLoRA-GPTQ
 git pull https://huggingface.co/TheBloke/llama-2-70b-Guanaco-QLoRA-GPTQ
 git clone https://huggingface.co/georgesung/llama2_7b_chat_uncensored
@@ -68,7 +68,10 @@ ls -la
 apt-get clean
 
 cd /root/text-generation-webui
-sed -i 's/--api/--api --model TheBloke_Wizard-Vicuna-30B-Uncensored-GPTQ --model_type LLaMA --chat --wbits 4 --auto-devices --extensions long_term_memory whisper_stt silero_tts elevenlabs_tts llama_prompts sd_api_pictures/g' /workspace/run-text-generation-webui.sh
+#sed -i 's/--api/--api --model TheBloke_Wizard-Vicuna-30B-Uncensored-GPTQ --model_type LLaMA --chat --wbits 4 --auto-devices --extensions long_term_memory whisper_stt silero_tts elevenlabs_tts llama_prompts sd_api_pictures/g' /workspace/run-text-generation-webui.sh
+
+sed -i 's/--api/--api --model TheBloke_llama-2-70b-Guanaco-QLoRA-GPTQ --model_type LLaMA --chat --auto-devices --extensions long_term_memory whisper_stt silero_tts llama_prompts sd_api_pictures/g' /workspace/run-text-generation-webui.sh
+#
 #python server.py --listen --api --model TheBloke_Wizard-Vicuna-30B-Uncensored-GPTQ --model_type LLaMA --chat --wbits 4 --auto-devices --extensions long_term_memory whisper_stt silero_tts elevenlabs_tts llama_prompts sd_api_pictures
 
 
